@@ -1,0 +1,396 @@
+---
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/panna_logo.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+		<title>Test Dualfyre</title>
+	</head>
+	<body>
+		<header>
+			<nav class="desktop">
+				<ul>
+					<li> <button> INICIO  </button> </li>
+					<li> <button> NOSOTROS </button> </li>
+					<li> <button> PRODUCTOS </button> </li>
+					<li> <img src="/panna_logo_p.svg" alt="logo de panna" class="img_logo_header"> </li>
+					<li> <button> LOCAL </button> </li>
+					<li> <button> CONTACTO </button> </li>
+					<li> 
+						<img src="/menu_pedidos_ya.svg" alt="menu pedidos ya" class="nav_logo">	
+						<img src="/menu_rappi.svg" alt="menu rappi" class="nav_logo">	
+					</li>
+				</ul>
+			</nav>
+			<nav class="mobile">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="menu">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+				</svg>
+				
+				<img src="/panna_logo_p.svg" alt="logo de panna" class="img_logo_header"> 
+				<div></div>
+			</nav>
+		</header>
+
+		<section class="hero">
+			<div class="heroText">
+				<img src="/panna_logo.svg" alt="logo de Panna helados">
+				<p class="title"> PEDÍ ONLINE! </p>
+				<p class="subtitle">
+					Armá tu pedido desde nuestra página, envialo por Whatsapp en un click y nosotros te lo mandamos
+				</p>
+				<button>
+					INICIAR PEDIDO
+				</button>
+			</div>
+			<img src="/ice_cream.png" alt="helado" class="ice_cream">
+			<img src="/cacao.png" alt="helado" class="cacao">
+
+			<div class="linea">
+
+			</div>
+		
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="logo_arrow_down">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /> 
+			</svg>
+			
+		</section>
+		
+		<section class="sobreNosotros">
+			<div class="sobreNosotros_text">
+				<p class="title"> Sobre Nosotros </p>
+				<p class="subtitle">
+					En 1987 abrimos nuestras puertas al público en la esquina de Pueyrredon y Mansilla. Desde que abrimos hasta el día de hoy, elaboramos el helado artesanalmente teniendo exclusividad de venta en nuestro local, nuestra casa. Desde el principio tuvimos el objetivo de crear y mantener nuestra calidad artesanal para poder brindar el mejor producto 100% propio.
+				</p>
+			</div>
+		</section>
+
+	</body>
+</html>
+
+<style>
+
+/* un par de css reset */
+button {
+	background-color: transparent;
+	padding: 0;
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	color: inherit;
+	cursor: pointer;
+}
+
+p {
+	margin: 0;
+}
+
+body {
+	margin: 0;
+	font-family: 'Rubik', sans-serif !important;
+	background-color: #f1eae5;
+	overflow-x: hidden;
+}
+
+header {
+	position: fixed;
+	z-index: 2000;
+	top: 0;	
+	width: 100%;
+  transition: background-color 200ms linear;
+}
+
+nav.mobile {
+	display: none;
+}
+
+.header-colored {
+	background-color:#fff; 
+}
+
+.header-transparent {
+	background-color:transparent;
+}
+
+ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2.5rem;
+	margin: 2rem 2rem;
+}
+
+li {
+	list-style-type: none;
+	color: #858584;
+	font-weight: 500;
+  transition: all 300ms ease;
+}
+
+li > button {
+  transition: all 300ms ease;
+}
+
+li > button:hover {
+	color: #7f4f24;
+}
+
+.img_logo_header {
+	width: 3rem;
+}
+
+.nav_logo {
+	width: 2rem;
+	margin: 0 0.5rem;
+}
+
+section {
+	width: 100vw;
+}
+
+.hero {
+	height: 100vh;
+	color: #7f4f24;
+	position: relative;
+	display: grid;
+	place-items: center;
+	align-items: center;
+}
+
+.heroText {
+	margin: auto;
+	width: 60%;
+	z-index: 1500;
+}
+
+.heroText *  {
+	margin: 1rem 0rem;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 3rem;
+}
+
+.heroText > .subtitle {
+	font-weight: bold;
+	max-width: 15rem;
+}
+
+.heroText > button {
+	color: #fff;
+	padding: 0.8rem 3rem;
+	background-color: #e8962f;
+	border-radius: 5px;
+}
+
+.heroText > button:hover {
+	background-color: #be873e;
+}
+
+.heroText > img {
+	width: 9rem;
+	animation: 0.5s ease-out 0s 1 slideDown;
+
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(20%);
+		opacity: 0;
+  }
+  100% {
+		transform: translateY(0);
+		opacity: 1;
+  }
+}
+
+.ice_cream {
+	position: absolute;
+	bottom: -300px;
+	right: -100px;
+	z-index: 1000;
+	animation: 0.5s ease-out 0s 1 slideUp;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(-10%);
+		opacity: 0;
+  }
+  100% {
+		transform: translateY(0);
+		opacity: 1;
+  }
+}
+
+.cacao {
+	position: absolute;
+	max-width: 15rem;	
+	top: 150px;
+	left: 2vw;
+}
+
+.linea {
+	position: absolute;
+	height: 95vh;
+	margin: 0.7rem 0.5rem;
+	left: 10px;
+	top: 0;
+	width: 1px;
+	background-color: #7f4f24;
+}
+
+.logo_arrow_down { 
+	position: absolute;
+	font-weight: bold;
+	bottom: 30px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 2rem;
+	font-size: 25px;
+	animation-name: bounce;
+	animation-timing-function: ease; 
+	animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+	0% {transform: translateY(0);} 
+	50% {transform: translateY(-30px);} 
+	100% {transform: translateY(-0px);} 
+} 
+
+.sobreNosotros {
+	height: 60vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("/divider2.jpg");
+	background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	display: grid;
+	place-items: center;
+	color: white;
+}
+
+.sobreNosotros_text {
+	width: 60%;
+}
+
+.sobreNosotros_text > .title {
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin: 2rem 0;
+}
+
+.sobreNosotros_text > .subtitle {
+	max-width: 20rem;
+}
+
+@media screen and (max-width: 768px) {
+
+	.header-transparent {
+		background-color: white;
+	}
+
+	nav.desktop {
+		display: none;
+	}
+
+	nav.mobile {
+		display: block;
+		display: flex;
+		padding: 1.5rem;
+		justify-content: space-between;
+		position: relative;
+	}
+
+	.menu {
+		width: 2rem;
+		color: #7f4f24;
+		font-weight: bold;
+	}
+
+	.heroText {
+		text-align: center;
+		width: 100%;
+	}
+
+	.heroText *  {
+		margin: 1rem 0rem;
+	}
+
+	.title {
+		font-weight: bold;
+		font-size: 3rem;
+	}
+
+	.heroText > .subtitle {
+		font-weight: bold;
+		max-width: 15rem;
+		margin: auto;
+	}
+
+	.heroText > img {
+		width: 6rem;
+	}
+
+	.ice_cream {
+		width: 300px;
+		bottom: -100px;
+		right: 0;
+	}
+
+	.cacao {
+		width: 8rem;
+		left: -50px;
+	}
+
+	.sobreNosotros_text {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 1280px) and (min-width: 769px) {
+	.ice_cream {
+		width: 800px;
+		left: 50%;
+	}
+
+	.cacao {
+		width: 130px;
+		left: -30px;
+	}
+}
+
+
+
+</style>
+
+
+<script>
+
+var header = document.getElementsByTagName('header')[0];
+window.onscroll = function () { 
+	
+    if (document.body.scrollTop >= 100 || document.documentElement.scrollTop >= 100) {
+			header.classList.add("header-colored");
+			header.classList.remove("header-transparent");
+		} 
+    else {
+			header.classList.add("header-transparent");
+			header.classList.remove("header-colored");
+    }
+};
+
+</script>
